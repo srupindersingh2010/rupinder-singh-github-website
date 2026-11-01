@@ -32,3 +32,5 @@ gallery:[
 {src:'images/about/rupinder-residents.jpg',caption:'Public service rooted in the community',category:'community'}
 ]
 };
+siteContent.news.forEach((item,i)=>{item.image=siteContent.gallery[i%siteContent.gallery.length].src;item.alt=siteContent.gallery[i%siteContent.gallery.length].caption;delete item.date;});
+siteContent.gallery.push({src:'images/about/bigpic.jpg',caption:'Cllr Rupinder Singh — formal portrait',category:'portraits'},{src:'images/about/Cllr_Singh.jpg',caption:'Cllr Rupinder Singh — headshot',category:'portraits'});

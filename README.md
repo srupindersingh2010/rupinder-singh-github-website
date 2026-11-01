@@ -1,38 +1,21 @@
-# Cllr Rupinder Singh — GitHub Pages website
+# Cllr Rupinder Singh — website
 
-A static, mobile-first website using only HTML, CSS and plain JavaScript. No npm or build step is required.
+A static, photograph-led website for GitHub Pages. Open index.html through a local web server; no build or package installation is needed.
 
-## Publish on GitHub Pages
-1. Unzip this package.
-2. Upload the **contents** of the `rupinder-singh-website` folder to the root of your GitHub repository. `index.html` must be at the repository root.
-3. In GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**. Select your publishing branch (normally `main`) and `/ (root)`.
-4. Wait for GitHub Pages to publish the site.
+## Editing
+- Page copy: the individual HTML files.
+- News summaries, campaigns, photographs and contact information: js/content.js.
+- Shared navigation, gallery and email draft behaviour: js/main.js.
+- Layout: css/style.css, css/pages.css and css/redesign.css (loaded in that order).
+- Real photographs: images/hero, images/about, images/campaigns and images/press.
 
-## Before public launch
-- Open `js/content.js` and replace `[PLACEHOLDER]` with a verified residents-helped figure, or change the label.
-- Replace `REPLACE_ME` in `contact.html` and `news.html` with your Formspree form ID, or remove the forms until configured.
-- Review `privacy.html` after choosing the actual form/newsletter providers.
-- Add your approved photographs to the image folders and list gallery images in `js/content.js`.
-- Review all campaign/news copy and dates before publishing.
+## Contact and updates
+The contact form opens a prefilled email draft for the visitor to review and send. It does not submit to a server. Phone and email links are available independently. Newsletter enquiries use email; social updates link to Facebook. No mailing list provider is configured, and no sign-up is submitted automatically.
 
-## Adding photos
-Recommended paths:
-- `images/hero/` — wide homepage images
-- `images/about/` — profile/community images
-- `images/gallery/` — gallery images
-- `images/campaigns/` — campaign images
-- `images/press/` — approved high-resolution press headshots
+News entries are general summaries retained from the existing site, not independently verified dated news reports. Add actual articles and publication dates when available. Confirm roles, contact details and surgery arrangements as they change.
 
-Then add gallery entries in `js/content.js`, for example:
-```js
-{src:"images/gallery/street-surgery.jpg", caption:"Street surgery on Binley Road", category:"community"}
-```
+## GitHub Pages
+Publish from the main branch, repository root. All local links use relative paths, including assets, so the site works under the repository subdirectory. Previous versions remain in Git history.
 
-## Custom domain
-If you later point a custom domain at GitHub Pages, configure it in **Settings → Pages → Custom domain**. GitHub may create a `CNAME` file automatically. If you manage it manually, the `CNAME` file should contain only the domain name, e.g. `www.example.co.uk`.
-
-## Structure
-All pages use relative links, so the site works from a GitHub Pages project repository as well as a custom domain.
-
-## Important
-The included privacy page is a launch-ready framework, not legal advice. Update it to accurately describe the services and data processing you actually use.
+## Checks
+JavaScript syntax, local page/image targets, keyboard navigation, portrait gallery filtering and lightbox behaviour were checked during the rebuild.
